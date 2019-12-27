@@ -5,6 +5,7 @@ import javafx.beans.property.StringProperty;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.image.Image;
 import javafx.stage.Stage;
 
 import java.io.*;
@@ -25,6 +26,7 @@ public class Main extends Application {
 
      /*
         TODO: check SWF lobby
+        TODO: add icons
      */
 
     /*
@@ -220,7 +222,7 @@ public class Main extends Application {
                         lobbyStart = null;
                     }
 
-                    Thread.sleep(1000);
+                    Thread.sleep(500);
                 } catch (IOException | InterruptedException e){
                     e.printStackTrace();
                 }
@@ -251,7 +253,7 @@ public class Main extends Application {
                 }
                 fileLength = log.length();
                 try {
-                    Thread.sleep(1000);
+                    Thread.sleep(500);
                 } catch (InterruptedException e) {
                     e.printStackTrace();
                 }
@@ -265,6 +267,7 @@ public class Main extends Application {
 
         primaryStage.setTitle("Queue Timer");
         Scene scene = new Scene(root);
+//        primaryStage.getIcons().add(new Image(this.getClass().getResourceAsStream("DeadByDaylight.ico")));
         primaryStage.setScene(scene);
         primaryStage.show();
 
